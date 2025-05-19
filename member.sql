@@ -6,6 +6,8 @@ FLUSH PRIVILEGES;
 
 USE new_schema;
 
+DROP TABLE IF EXISTS Member;
+
 CREATE TABLE Member (
     mId CHAR(20) NOT NULL,
     pId CHAR(10) NOT NULL,
@@ -16,6 +18,9 @@ CREATE TABLE Member (
     email VARCHAR(20),
     introducer CHAR(20)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+DELETE FROM Member;
 
 INSERT INTO Member VALUES
 ('a0910001', 'A220123456', 'Jenny', '1979-01-01', '02-22220001', '台北市中山北路100號', 'jenny@ms1.hinet.net', 'b09055555'),
