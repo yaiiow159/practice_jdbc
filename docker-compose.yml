@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  mysql:
+    image: mysql:8.0.28
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: new_schema
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql_data:/var/lib/mysql 
